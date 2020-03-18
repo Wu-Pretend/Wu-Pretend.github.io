@@ -1,0 +1,41 @@
+body {
+	background: url(../img/0.jpg);
+	/*修改此处图片名称可改变背景图片*/
+	background-repeat: no-repeat;
+	background-size: cover;
+}	
+html,body {
+	overflow: hidden;
+	height: 100%;
+}
+
+#search .from {
+	margin: 300px 20%;
+}
+
+#search .from .item1 input {
+	border: 0; /*删除边框*/
+	outline: none;
+	border-bottom: 2px solid #ffffff;
+	width: 75%;
+	height: 80px;
+	font-size: 30px;
+	padding: 5px 10px;
+	background: #ffffff00;
+	color: #fff;
+}
+
+#search .from .item2 input {
+	width: 140px;
+	height: 80px;
+	font-size: 30px;
+	font-weight: 600;
+	color: #fff;
+	background: #FFFFFF00;
+	border: 0;
+	outline: none;
+	border-bottom: 2px solid #ffffff;
+	position: relative;
+	left:80%;
+	bottom:80px;
+}
