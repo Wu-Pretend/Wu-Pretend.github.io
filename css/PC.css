@@ -1,0 +1,45 @@
+body {
+	background: url(https://desk-fd.zol-img.com.cn/t_s2560x1600c5/g5/M00/01/0E/ChMkJ1bKwXKICQU4AAroM40q7JkAALGYgBlY3EACuhL341.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+html,body {
+	overflow: hidden;
+	height: 100%;
+}
+#search_box {
+	width: 50%;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 18%;
+	position: relative;
+}
+#search_box .item1 input {
+	outline: none;
+	border: 0;
+	font-size: 30px;
+	padding: 5px auto;
+	background: #ffffff00;
+	border-bottom: 2px solid #ffffff;
+	width: 60%;
+	height: auto;
+	position: absolute;
+	left: 10%;
+	right: 20%;
+	top: 40%;
+	color: #FFFFFF;
+}
+#search_box .item2 input {
+	border: 0;
+	font-size: 26px;
+	border-bottom: 2px solid #ffffff;
+	background: #FFFFFF00;
+	outline: none;
+	width: 13%;
+	height: auto;
+	position: absolute;
+	left: 72%;
+	right: 10%;
+	top: 40%;
+	color: #FFFFFF;
+}
