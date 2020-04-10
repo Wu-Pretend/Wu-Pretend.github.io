@@ -16,13 +16,13 @@ html,body {
 #search .from .item1 input {
 	border: 0; /*删除边框*/
 	outline: none;
-	border-bottom: 2px solid #ffffff;
+	border-bottom: 2px solid rgb(255,255,255);
 	width: 75%;
 	height: 80px;
 	font-size: 30px;
 	padding: 5px 10px;
-	background: #ffffff00;
-	color: #fff;
+	background: rgba(255,255,255,0);
+	color: rgb(255,255,255);
 }
 
 #search .from .item2 input {
@@ -30,11 +30,11 @@ html,body {
 	height: 80px;
 	font-size: 30px;
 	font-weight: 600;
-	color: #fff;
-	background: #FFFFFF00;
+	color: rgb(255,255,255);
+	background: rgba(255,255,255,0);
 	border: 0;
 	outline: none;
-	border-bottom: 2px solid #ffffff;
+	border-bottom: 2px solid rgb(255,255,255);
 	position: relative;
 	left:80%;
 	bottom:80px;
