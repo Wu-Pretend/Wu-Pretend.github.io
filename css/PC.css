@@ -31,14 +31,14 @@ html,body {
 }
 #search_box .item2 input {
 	border: 0;
-	font-size: 26px;
+	font-size: 163%;
 	border-bottom: 2px solid rgb(255,255,255);
 	background: rgba(255,255,255,0);
 	outline: none;
-	width: 13%;
+	width: 15%;
 	height: auto;
 	position: absolute;
-	left: 72%;
+	left: 71%;
 	right: 10%;
 	top: 40%;
 	color: rgb(255,255,255);
