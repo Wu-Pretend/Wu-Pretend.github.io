@@ -19,21 +19,21 @@ html,body {
 	border: 0;
 	font-size: 30px;
 	padding: 5px auto;
-	background: #ffffff00;
-	border-bottom: 2px solid #ffffff;
+	background: rgba(255,255,255,0);
+	border-bottom: 2px solid rgb(255,255,255);
 	width: 60%;
 	height: auto;
 	position: absolute;
 	left: 10%;
 	right: 20%;
 	top: 40%;
-	color: #FFFFFF;
+	color: rgb(255,255,255);
 }
 #search_box .item2 input {
 	border: 0;
 	font-size: 26px;
-	border-bottom: 2px solid #ffffff;
-	background: #FFFFFF00;
+	border-bottom: 2px solid rgb(255,255,255);
+	background: rgba(255,255,255,0);
 	outline: none;
 	width: 13%;
 	height: auto;
@@ -41,5 +41,5 @@ html,body {
 	left: 72%;
 	right: 10%;
 	top: 40%;
-	color: #FFFFFF;
+	color: rgb(255,255,255);
 }
