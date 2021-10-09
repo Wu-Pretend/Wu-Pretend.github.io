@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta content="text/html" charest="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+		<link rel="stylesheet" href="./css/style.css"/>
+		<link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css"/>
+		<link rel="shortcut icon" href="./favicon.ico"/>
+		<script type="text/javascript" src="js/judge.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/Cookie.js"></script>
+		<script src="js/setbackground.js"></script>
+        <title>搜索</title>
+    </head>
+    <body>
+		<span id="mbut" class="fa fa-navicon fa-5x" style="color: rgb(255,255,255);"></span>
+		<div id="menubox">
+				<box>
+					<li class="list" id="baidu">百度 Baidu</li>
+				</box>
+				<box>
+					<li class="list" id="bing">必应 Bing</li>
+				</box>
+				<box>
+					<li class="list" id="google">谷歌 Google</li>
+				</box>
+				<box>
+					<li class="list" id="sougo">搜狗 Sougo</li>
+				</box>
+				<box>
+					<li class="list" id="alter" title="更换壁纸">切换壁纸</li>
+				</box>
+		</div>
+		<div id="search_box">
+			<div class="from">
+				<form action="http://m.baidu.com/s" target="_blank">
+					<div class="item1">
+							<input id="type_item" type="text" name="word" size="auto" autocomplete="off">
+						</div>
+					<div class="item2">
+						<input type="submit" value="搜 索">
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		getbgid();
+		$("#mbut").click(function(){
+			$("#mbut").hide(0);
+			$("#menubox").show(200);
+		});
+		$("#menubox").click(function(){
+			$("#mbut").show(0);
+			$("#menubox").hide(200);
+		});
+		$("li").click(function(event){
+			switch(event.target){
+				case baidu:
+					$("form").attr("action","http://m.baidu.com/s");
+					$("#type_item").attr("name","word");
+				break;
+				case google:
+					$("form").attr("action","https://www.google.com/search");
+					$("#type_item").attr("name","q");
+				break;
+				case bing:
+					$("form").attr("action","https://cn.bing.com/search");
+					$("#type_item").attr("name","q");
+				break;
+				case sougo:
+					$("form").attr("action","https://m.sogou.com/web/searchList.jsp");
+					$("#type_item").attr("name","keyword");
+				break;
+				case alter:
+					replace();
+				break;
+				default:
+					$("form").attr("action","http://m.baidu.com/s");
+					$("#type_item").attr("name","word");
+				break;
+			}
+		});
+	</script>
+</html>
