@@ -1,43 +1,55 @@
 var N;//公共变量N
-bgcookie = function(dat){
+function bgcookie(dat){
 	var ID = dat;
 	setCookie('BGID',ID,30);//cookie名，//cookie值，cookie过期时间
 }
 //设置手机版页面壁纸Cookie
-pcbgcookie = function(dat){
+function pcbgcookie(dat){
 	var ID = dat;
 	setCookie('PCBGID',ID,30);//cookie名，//cookie值，cookie过期时间
 }
 //设置PC版页面壁纸Cookie		
-replace = function(){
-	N=Math.floor(Math.random()*20);//壁纸库增加/减少需修改此处数据，数值为壁纸数+1
-	document.body.style.backgroundImage = "url(../img/"+N+".jpg)";
+function replace(){
+	var N = Math.floor(Math.random()*20);//壁纸库增加/减少需修改此处数据，数值为壁纸数+1
+	document.body.style.background = "url(img/"+N+".jpg)";
+	document.body.style.backgroundRepeat = "no-repeat";
+	document.body.style.backgroundSize = "cover";
 	bgcookie(N);
 }
 //手机版页面壁纸切换
-pcreplace = function(){
-	N=Math.floor(Math.random()*11);//壁纸库增加/减少需修改此处数据，数值为壁纸数+1
-	document.body.style.backgroundImage = "url(../img/imgpc/"+N+".jpg)";
+function pcreplace(){
+	var N = Math.floor(Math.random()*11);//壁纸库增加/减少需修改此处数据，数值为壁纸数+1
+	document.body.style.background = "url(../img/imgpc/"+N+".jpg)";
+	document.body.style.backgroundRepeat = "no-repeat";
+	document.body.style.backgroundSize = "100% auto";
 	pcbgcookie(N);
 }
 //PC版页面壁纸切换		
-getbgid = function(){
+function getbgid(){
 	var num;
 	num = getCookie('BGID');
-	document.body.style.backgroundImage = "url(../img/"+num+".jpg)";
-	if(num == 1000)
+	console.log(num);
+	if((num == 1000) || (num == null))
 	{
-		document.body.style.backgroundImage = "url(../img/13.jpg)";
+		replace();
+	}else{
+		document.body.style.backgroundImage = "url(img/"+num+".jpg)";
 	}
 }
 //读取手机版页面壁纸Cookie
 getpcbgid = function(){
 	var numpc;
 	numpc = getCookie('PCBGID');
-	document.body.style.backgroundImage = "url(../img/imgpc/"+numpc+".jpg)";
-	if(numpc == 1000)
-	{
-		document.body.style.backgroundImage = "url(../img/imgpc/0.jpg)";
+	console.log(numpc);
+	if(numpc == null){
+		pcreplace();
+	}else{
+		document.body.style.backgroundImage = "url(../img/imgpc/"+numpc+".jpg)";
+		document.body.style.backgroundRepeat = "no-repeat";
+		document.body.style.backgroundSize = "100% auto";
+	}
+	if(numpc == 1000){
+		replace();
 	}
 }
 //读取PC版页面壁纸Cookie

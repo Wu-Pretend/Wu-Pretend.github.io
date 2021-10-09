@@ -1,3 +1,8 @@
+/*
+cname: cookie 名
+cvalue: cookie值
+exdays: cookie有效日期
+*/
 setCookie = function(cname,cvalue,exdays) {
 	var d = new Date();
 	d.setTime(d.getTime()+(exdays*24*60*60*1000));
@@ -14,5 +19,5 @@ getCookie = function(cname) {
 		if (c.indexOf(name)==0)
 			return c.substring(name.length,c.length);
 	}
-	return 1000;
+	return null;
 }
