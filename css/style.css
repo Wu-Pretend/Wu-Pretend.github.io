@@ -1,6 +1,6 @@
 /*"."为类(class)名选择器，"#"为id选择器，id优先级高于类(class),id一般预留给脚本。*/
 body {
-	/*background: url(../img/13.jpg);*/
+	/* background: url(img/13.jpg); */
 	/*修改此处图片名称可改变背景图片*/
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -10,20 +10,8 @@ html,body {
 	height: 100%;
 }
 
-#baidu {
+#search_box {
 	margin: 300px 20%;
-}
-
-#bing {
-	margin: 300px 20%;
-}
-
-#google {
-	margin: 300px 20%;
-}
-
-#sougo {
-	margin: 300px 20%
 }
 
 .from {
@@ -59,9 +47,10 @@ html,body {
 }
 
 #menubox {
+	display: none;
 	background-color: rgba(255,255,255,0.5);
-	width: 75%;
-	height: 95%;
+	width: 100%;
+	height: 100%;
 	color: #F0F8FF;
 	border-radius: 40px;
 	backdrop-filter: blur(30px);
